@@ -1,5 +1,7 @@
 package com.campaign.monitor.service;
 
+import com.campaign.monitor.model.list.CMList;
+import com.campaign.monitor.model.list.Subscriber;
 import com.campaign.monitor.model.list.SubscriberList;
 
 import java.util.List;
@@ -11,4 +13,8 @@ import java.util.List;
  */
 public interface CampaignMonitorApiService {
     List<SubscriberList> getAllListForClient(String clientId);
+
+    String createList(CMList list, String clientId);
+
+    String subscribe(Subscriber subscriber, String listId);
 }
